@@ -23,7 +23,6 @@
         const request = new XMLHttpRequest();
         request.open('GET', endpoint,true);
         request.send(null); 
-        request.addEventListener('load', getRequest); 
         document.getElementById("demo").innerHTML = request.responseText;
         console.log("這邊是console log產生的");
       }  
