@@ -23,8 +23,8 @@
       request.open('GET', endpoint,true);
       request.send(null); 
       request.addEventListener('load',getRequest);
+      console.log('request.responseText=' + request.responseText);
       function getRequest(){
-          console.log(request.responseText);
           document.getElementById("demo").innerHTML = request.responseText;
       }
 
