@@ -22,9 +22,11 @@
     <script>
       var endpoint = 'https://data.kcg.gov.tw/dataset/a98754a3-3446-4c9a-abfc-58dc49f2158c/resource/48d4dfc4-a4b2-44a5-bdec-70f9558cd25d/download/yopendata1070622opendatajson-1070622.json'; 
       const request = new XMLHttpRequest();
+      var a1 = null;
       
       function getRequest(){
-          document.getElementById("demo").innerHTML = request.responseText;
+          a1 = JSON.parse(request.responseText);
+          document.getElementById("demo").innerHTML = a1[135].Address;
       }
 
       function change_text(){
